@@ -46,3 +46,36 @@ variable "private-subnet-4-cidr" {
   description   = "Private Subnet 4 CIDR Block"
   type          = string
 }
+
+variable "ssh-location" {
+  default       = "0.0.0.0/0"
+  description   = "IP Address That Can SSH Into the EC2 Instance"
+  type          = string
+}
+
+#variable "database-snapshot-identifier" {
+#  # To get snapshot
+#  # Go to page RDS -> Snapshots -> Select snapshot -> copy ARN and paste it to default
+#  default       = "arn:aws:rds:us-east-1:707068199283:snapshot:mysql57db-final-snapshot"
+#  description   = "The Database Snapshot ARN"
+#  type          = string
+#}
+
+variable "database-instance-class" {
+  default       = "db.t2.micro"
+  description   = "The Database Instance Type"
+  type          = string
+}
+
+## to get instance, go to snapshots -> copy instances/cluster name and paste to default
+#variable "database-instance-identifier" {
+#  default       = "mysql157db"
+#  description   = "The Database Instance Idnetifier"
+#  type          = string
+#}
+
+variable "multi-az-deployment" {
+  default       = false
+  description   = "Create a Standby DB Instance"
+  type          = bool
+}
