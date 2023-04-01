@@ -4,3 +4,5 @@
 3. type "terraform plan"<br />
 4. after check, type "terraform apply" if confirm<br />
 5. To delete, type "terraform destroy"<br />
+</br>
+https://jhooq.com/terraform-run-specific-resource/
